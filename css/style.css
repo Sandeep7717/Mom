@@ -1,0 +1,193 @@
+.mom {
+    text-align: center;
+    margin: auto;
+}
+
+.circle {
+    /* background-color: yellow; */
+    border-radius: 50%;
+    /* creates a circular background */
+    height: 50px;
+    /* makes the sun the size of the viewport */
+    width: 50px;
+    border-radius: 50%;
+    aspect-ratio: 1 / 1;
+    animation: 1s linear 0s infinite alternate sun-rise;
+    position: absolute;
+    top: 0;
+    right: 80%;
+    font-weight: 600;
+    display: inline;
+}
+
+
+.circle img {
+    width: 50px;
+    display: inline-block;
+}
+
+.circle-one {
+    /* background-color: yellow; */
+    border-radius: 50%;
+    /* creates a circular background */
+    height: 50px;
+    /* makes the sun the size of the viewport */
+    width: 50px;
+    border-radius: 50%;
+    aspect-ratio: 1 / 1;
+    animation: 1s linear 0s infinite alternate sun-rise;
+    position: absolute;
+    top: 0;
+    right: 70%;
+    font-weight: 600;
+    display: inline;
+}
+
+.circle-one img {
+    width: 50px;
+    display: inline-block;
+}
+
+@keyframes sun-rise {
+    from {
+        /* pushes the sun down past the viewport */
+        transform: translateY(50px);
+    }
+
+    to {
+        /* returns the sun to its default position */
+        transform: translateY(0);
+    }
+}
+
+.love {
+    background-color: hotpink;
+    border-radius: 5px;
+    padding: 10px 20px;
+    display: inline-block;
+    cursor: pointer;
+
+
+}
+
+.love a {
+    color: #fff;
+    text-decoration: none;
+}
+
+
+.love:hover {
+    animation-name: rotate;
+    animation-duration: 0.7s;
+    animation-direction: reverse;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.container {
+    width: 230px;
+    height: 200px;
+    margin-top: 400px;
+    background: pink;
+    display: inline-block;
+    text-align: center;
+}
+
+.container-two {
+    width: 230px;
+    height: 200px;
+    margin-top: 400px;
+    background: pink;
+    display: inline-block;
+    text-align: center;
+}
+
+.container-last {
+    width: 230px;
+    height: 200px;
+    margin-top: 400px;
+    background: pink;
+    display: inline-block;
+    text-align: center;
+}
+
+.target {
+    width: 20px;
+    height: 50px;
+
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+@keyframes slide {
+
+    20%,
+    40% {
+        transform: translateX(100px);
+
+    }
+
+    80%,
+    100% {
+        transform: translateX(150px);
+
+    }
+}
+
+.target {
+    transform: translateX(30px) rotate(45deg);
+    animation: slide 5s linear infinite;
+}
+
+.target:hover {
+    animation-play-state: paused;
+}
+
+#replace {
+    animation-composition: replace;
+}
+
+#add {
+    animation-composition: add;
+}
+
+#accumulate {
+    animation-composition: accumulate;
+}
+
+@media screen and (max-width:767px) {
+    .container {
+        width: 100%;
+
+        margin: 200px 0 10px 0;
+    }
+
+    .container-two {
+        width: 100%;
+
+        margin-top: 10px
+    }
+
+    .container-last {
+        width: 100%;
+
+        margin-top: 10px
+    }
+
+    .circle-one {
+        right: 35%;
+    }
+
+    .circle {
+
+        right: 60%;
+    }
+}
